@@ -1,0 +1,60 @@
+<!-- semesterSelection.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Select a Semester</title>
+  <style>
+    /* Add your styling here */
+  </style>
+</head>
+<body>
+  <h1 id="courseName"></h1>
+  <div id="semesterYearList"></div>
+  <button id="backToCoursesBtn">Back to Courses</button>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const params = new URLSearchParams(window.location.search);
+      const course = params.get('course');
+      const courseNameElem = document.getElementById('courseName');
+      const semesterYearListElem = document.getElementById('semesterYearList');
+      const backToCoursesBtn = document.getElementById('backToCoursesBtn');
+
+      // Display the selected course name
+      courseNameElem.textContent = `Select a Semester for ${course}`;
+
+      // Define semester options based on the course
+      const courseOptions = {
+        BCA: { semesters: [1, 2, 3, 4, 5, 6] },
+        BBA: { semesters: [1, 2, 3, 4, 5, 6] },
+        BJMC: { semesters: [1, 2, 3, 4, 5, 6] },
+        MSc: { semesters: [1, 2, 3, 4] },
+        // You can define more courses here if necessary
+      };
+
+      const selectedOptions = courseOptions[course]?.semesters || [];
+
+      // Create buttons for each semester
+      selectedOptions.forEach(option => {
+        const button = document.createElement("button");
+        button.textContent = `Semester ${option}`;
+        button.onclick = function() {
+          window.location.href = `subjectDetails.html?course=${course}&semester=${option}`;
+        };
+        semesterYearListElem.appendChild(button);
+      });
+
+      if (selectedOptions.length === 0) {
+        semesterYearListElem.innerHTML = "<p>No options available for this course.</p>";
+      }
+
+      // Handle the "Back to Courses" button
+      backToCoursesBtn.onclick = function() {
+        window.location.href = "subjects.html"; // Go back to Courses page
+      };
+    });
+  </script>
+</body>
+</html>

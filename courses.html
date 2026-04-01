@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Courses</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Choose a Course</h1>
+    </header>
+
+    <nav>
+      <!-- Course Buttons with Categories for BSc and MSc -->
+      <button onclick="window.location.href='semester.html?course=BCA'">BCA</button>
+      <button onclick="window.location.href='semester.html?course=BBA'">BBA</button>
+      <button onclick="window.location.href='semester.html?course=BJMC'">BJMC</button>
+      <button onclick="window.location.href='semester.html?course=MIB'">MIB</button>
+
+      <!-- BSc and MSc with Categories -->
+      <button onclick="window.location.href='semester.html?course=BSc&category=Microbiology'">BSc - Microbiology</button>
+      <button onclick="window.location.href='semester.html?course=BSc&category=Biotechnology'">BSc - Biotechnology</button>
+      <button onclick="window.location.href='semester.html?course=MSc&category=Microbiology'">MSc - Microbiology</button>
+      <button onclick="window.location.href='semester.html?course=MSc&category=Biotechnology'">MSc - Biotechnology</button>
+    </nav>
+
+    <button id="backToBtn" onclick="window.location.href='index.html'">Back to Home</button>
+  </div>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

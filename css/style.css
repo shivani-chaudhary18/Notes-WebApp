@@ -1,0 +1,229 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body Styling for Full-Screen Centering */
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #f4f6f9;
+  color: #212529;
+  line-height: 1.6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh; /* Full viewport height */
+  margin: 0;
+  padding: 0; /* Equal margins from all directions */
+}
+
+/* Container for Centered Content */
+.container {
+  max-width: 900px;
+  width: 100%;
+  padding: 30px;
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column; /* Stack elements vertically */
+  justify-content: center; /* Center vertically */
+  align-items: center; /* Center horizontally */
+  text-align: center;
+  min-height: 70vh; /* Ensures content remains centered vertically */
+  transition: all 0.3s ease;
+}
+
+/* Hover Effect for Container */
+.container:hover {
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+/* Header Styling */
+h1 {
+  font-size: 2.8rem;
+  color: #007bff;
+  font-weight: 600;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+
+h2 {
+  font-size: 1.8rem;
+  margin-bottom: 30px;
+  color: #343a40;
+}
+
+/* Consistent Button Styling */
+button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 15px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+  width: 250px; /* Consistent width for all buttons */
+  margin: 10px;
+  box-shadow: 0 6px 12px rgba(0, 123, 255, 0.3);
+}
+
+button:hover {
+  background-color: #0056b3;
+  transform: translateY(-4px);
+}
+
+button:focus {
+  outline: none;
+}
+
+/* Buttons for Semester/Year Selection */
+#semesterYearList {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 40px;
+}
+
+#semesterYearList button {
+  background-color: #6c757d;
+  color: white;
+  border-radius: 10px;
+  padding: 15px 0;
+  width: 250px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+#semesterYearList button:hover {
+  background-color: #5a6268;
+  transform: translateY(-2px);
+}
+
+#semesterYearList button:focus {
+  outline: none;
+}
+
+/* Syllabus and Back Buttons */
+#syllabusBtn, #backToBtn {
+  padding: 15px;
+  font-size: 1.1rem;
+  background-color: #28a745;
+  color: white;
+  cursor: pointer;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+  width: 250px;
+}
+
+#syllabusBtn:hover, #backToBtn:hover {
+  background-color: #218838;
+  transform: translateY(-2px);
+}
+
+#backToBtn {
+  background-color: #dc3545;
+}
+
+#backToBtn:hover {
+  background-color: #c82333;
+}
+
+/* Section Styling */
+section {
+  padding: 30px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  margin-bottom: 40px;
+}
+
+section p {
+  font-size: 1.2rem;
+  color: #343a40;
+}
+
+/* Subject Buttons Styling */
+#subjectList {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+}
+
+button.subject-btn {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  margin: 10px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+  width: 200px;
+}
+
+button.subject-btn:hover {
+  background-color: #45a049;
+}
+
+/* Back Button Styling */
+#backToBtn {
+  display: block;
+  margin: 20px auto;
+  background-color: #007BFF;
+  padding: 10px 20px;
+  color: white;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#backToBtn:hover {
+  background-color: #0056b3;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .container {
+    padding: 20px;
+    min-height: auto;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  button {
+    width: 100%; /* Full width for smaller screens */
+    padding: 15px 0;
+    font-size: 1rem;
+  }
+
+  #semesterYearList {
+    flex-direction: column;
+  }
+
+  #semesterYearList button {
+    width: 100%; /* Full width for semester/year buttons */
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.6rem;
+  }
+
+  button {
+    font-size: 1rem;
+  }
+
+  #syllabusBtn, #backToBtn {
+    font-size: 1rem;
+  }
+}
