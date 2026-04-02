@@ -13,8 +13,5 @@ A simple and responsive Notes Web Application built using HTML, CSS, and JavaScr
 - CSS
 - JavaScript
 
-## 📸 Screenshot
-(Add your project screenshot here)
-
 ## 🔗 Live Demo
 (Add GitHub Pages link here)
