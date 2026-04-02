@@ -14,4 +14,4 @@ A simple and responsive Notes Web Application built using HTML, CSS, and JavaScr
 - JavaScript
 
 ## 🔗 Live Demo
-(Add GitHub Pages link here)
+https://shivani-chaudhary18.github.io/Notes-WebApp/
