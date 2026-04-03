@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const unitFiles = {
     "Mathematics-I": {
       units: [
-        { name: "Unit 1", file: "resources/Mathematics-1/Unit1.pdf" },
+        { name: "Unit 1", file: "./resources/Mathematics-1/Unit1.pdf" },
         { name: "Unit 2", file: "resources/Mathematics-1/Unit2.pdf" },
         { name: "Unit 3", file: "resources/Mathematics-1/Unit3.pdf" },
         { name: "Unit 4", file: "resources/Mathematics-1/Unit4.pdf" },
