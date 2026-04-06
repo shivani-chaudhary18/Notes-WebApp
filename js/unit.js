@@ -367,8 +367,7 @@ const createResourceButtons = (subjectResources) => {
   const resources = [
     { name: "Previous Year Papers", file: subjectResources.previousYearPapers },
     { name: "Online Learning", file: subjectResources.onlineLearning },
-    {name: "Syllabus",file: "resources/syllabus/BCA.pdf"
-  }
+    {name: "Syllabus", file: "/Notes-WebApp/resources/syllabus/BCA.pdf"} 
   ];
 
   resources.forEach(resource => {
